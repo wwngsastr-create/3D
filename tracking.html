@@ -1,0 +1,363 @@
+```html
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ติดตามงาน | PRINTLAB</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar">
+
+    <div class="logo">
+        <span class="logo-symbol">⬡</span>
+        PRINT<span>LAB</span>
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="index.html">
+            หน้าแรก
+        </a>
+
+        <a href="order.html">
+            สั่งพิมพ์
+        </a>
+
+        <a href="gallery.html">
+            ผลงาน
+        </a>
+
+        <a href="tracking.html"
+           class="active">
+            ติดตามงาน
+        </a>
+
+    </div>
+
+
+    <a href="order.html"
+       class="nav-button">
+
+        สั่งงาน
+
+    </a>
+
+</nav>
+
+
+
+<main class="tracking-page">
+
+
+    <div class="page-title">
+
+        <span class="section-label">
+            ORDER TRACKING
+        </span>
+
+        <h1>
+            ติดตามสถานะงาน
+        </h1>
+
+        <p>
+            ใส่หมายเลขคำสั่งซื้อของคุณ
+        </p>
+
+    </div>
+
+
+
+    <div class="tracking-search">
+
+        <input
+            type="text"
+            id="orderSearch"
+            placeholder="เช่น PL-2026-1234">
+
+        <button
+            id="searchOrder"
+            class="primary-button">
+
+            ค้นหางาน
+
+        </button>
+
+    </div>
+
+
+
+    <div id="trackingResult"
+         class="tracking-result hidden">
+
+
+        <div class="tracking-header">
+
+            <div>
+
+                <span>
+                    ORDER
+                </span>
+
+                <h2 id="trackingOrder">
+                    PL-2026-0000
+                </h2>
+
+            </div>
+
+            <span
+                id="trackingStatus"
+                class="status-badge">
+
+                กำลังดำเนินการ
+
+            </span>
+
+        </div>
+
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item completed">
+
+                <div class="timeline-dot">
+                    ✓
+                </div>
+
+                <div>
+
+                    <strong>
+                        รับคำสั่งซื้อ
+                    </strong>
+
+                    <p>
+                        เราได้รับข้อมูลการสั่งซื้อแล้ว
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="timeline-item completed">
+
+                <div class="timeline-dot">
+                    ✓
+                </div>
+
+                <div>
+
+                    <strong>
+                        ตรวจสอบไฟล์
+                    </strong>
+
+                    <p>
+                        ตรวจสอบโมเดลและรายละเอียดงาน
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="timeline-item current">
+
+                <div class="timeline-dot">
+                    03
+                </div>
+
+                <div>
+
+                    <strong>
+                        กำลังพิมพ์
+                    </strong>
+
+                    <p>
+                        งานของคุณกำลังเข้าสู่เครื่องพิมพ์
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot">
+                    04
+                </div>
+
+                <div>
+
+                    <strong>
+                        ตรวจสอบคุณภาพ
+                    </strong>
+
+                    <p>
+                        ตรวจสอบชิ้นงานหลังพิมพ์
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot">
+                    05
+                </div>
+
+                <div>
+
+                    <strong>
+                        จัดส่ง
+                    </strong>
+
+                    <p>
+                        เตรียมส่งสินค้าให้คุณ
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="tracking-info">
+
+            <div>
+
+                <span>
+                    ลูกค้า
+                </span>
+
+                <strong id="trackingCustomer">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    วัสดุ
+                </span>
+
+                <strong id="trackingMaterial">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    จำนวน
+                </span>
+
+                <strong id="trackingQuantity">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    ราคา
+                </span>
+
+                <strong id="trackingPrice">
+                    -
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div id="trackingEmpty"
+         class="tracking-empty">
+
+        <div>
+            ◌
+        </div>
+
+        <h2>
+            ยังไม่มีข้อมูล
+        </h2>
+
+        <p>
+            กรุณาใส่เลขคำสั่งซื้อเพื่อดูสถานะงาน
+        </p>
+
+    </div>
+
+
+</main>
+
+
+
+<footer>
+
+    <div class="footer-logo">
+        PRINT<span>LAB</span>
+    </div>
+
+    <p>
+        3D Printing Service
+    </p>
+
+    <div class="copyright">
+        © 2026 PRINTLAB
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+```

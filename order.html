@@ -1,0 +1,642 @@
+```html
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>สั่งพิมพ์ | PRINTLAB</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- NAV -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        <span class="logo-symbol">⬡</span>
+        PRINT<span>LAB</span>
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">
+            หน้าแรก
+        </a>
+
+        <a href="order.html" class="active">
+            สั่งพิมพ์
+        </a>
+
+        <a href="gallery.html">
+            ผลงาน
+        </a>
+
+        <a href="tracking.html">
+            ติดตามงาน
+        </a>
+
+    </div>
+
+    <a href="order.html"
+       class="nav-button">
+
+        สั่งงาน
+
+    </a>
+
+</nav>
+
+
+<!-- PAGE -->
+
+<main class="order-page">
+
+
+    <div class="page-title">
+
+        <span class="section-label">
+            NEW ORDER
+        </span>
+
+        <h1>
+            สั่งพิมพ์งาน 3D
+        </h1>
+
+        <p>
+            ส่งไฟล์ของคุณมาให้เราประเมินราคา
+        </p>
+
+    </div>
+
+
+    <div class="order-layout">
+
+
+        <!-- LEFT -->
+
+        <div class="order-form">
+
+
+            <!-- FILE -->
+
+            <div class="form-section">
+
+                <h2>
+                    01. อัปโหลดไฟล์
+                </h2>
+
+                <p class="form-description">
+                    รองรับไฟล์ STL, OBJ และ 3MF
+                </p>
+
+
+                <label class="upload-box"
+                       for="fileInput">
+
+                    <div class="upload-icon">
+                        ↑
+                    </div>
+
+                    <strong>
+                        คลิกเพื่อเลือกไฟล์
+                    </strong>
+
+                    <span>
+                        หรือลากไฟล์มาวางที่นี่
+                    </span>
+
+                    <small>
+                        Maximum 100 MB
+                    </small>
+
+                </label>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".stl,.obj,.3mf"
+                    hidden>
+
+
+                <div id="fileInfo"
+                     class="file-info hidden">
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MATERIAL -->
+
+            <div class="form-section">
+
+                <h2>
+                    02. เลือกวัสดุ
+                </h2>
+
+
+                <div class="option-grid">
+
+
+                    <label class="option-card">
+
+                        <input
+                            type="radio"
+                            name="material"
+                            value="PLA"
+                            data-price="2"
+                            checked>
+
+                        <div>
+
+                            <strong>
+                                PLA
+                            </strong>
+
+                            <span>
+                                เริ่มต้น 2 ฿/กรัม
+                            </span>
+
+                        </div>
+
+                    </label>
+
+
+                    <label class="option-card">
+
+                        <input
+                            type="radio"
+                            name="material"
+                            value="PETG"
+                            data-price="2.5">
+
+                        <div>
+
+                            <strong>
+                                PETG
+                            </strong>
+
+                            <span>
+                                เริ่มต้น 2.5 ฿/กรัม
+                            </span>
+
+                        </div>
+
+                    </label>
+
+
+                    <label class="option-card">
+
+                        <input
+                            type="radio"
+                            name="material"
+                            value="ABS"
+                            data-price="3">
+
+                        <div>
+
+                            <strong>
+                                ABS
+                            </strong>
+
+                            <span>
+                                เริ่มต้น 3 ฿/กรัม
+                            </span>
+
+                        </div>
+
+                    </label>
+
+
+                    <label class="option-card">
+
+                        <input
+                            type="radio"
+                            name="material"
+                            value="RESIN"
+                            data-price="5">
+
+                        <div>
+
+                            <strong>
+                                Resin
+                            </strong>
+
+                            <span>
+                                เริ่มต้น 5 ฿/กรัม
+                            </span>
+
+                        </div>
+
+                    </label>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- COLOR -->
+
+            <div class="form-section">
+
+                <h2>
+                    03. สี
+                </h2>
+
+
+                <div class="color-grid">
+
+
+                    <label class="color-option">
+
+                        <input
+                            type="radio"
+                            name="color"
+                            value="ดำ"
+                            checked>
+
+                        <span class="color-circle black"></span>
+
+                        ดำ
+
+                    </label>
+
+
+                    <label class="color-option">
+
+                        <input
+                            type="radio"
+                            name="color"
+                            value="ขาว">
+
+                        <span class="color-circle white"></span>
+
+                        ขาว
+
+                    </label>
+
+
+                    <label class="color-option">
+
+                        <input
+                            type="radio"
+                            name="color"
+                            value="แดง">
+
+                        <span class="color-circle red"></span>
+
+                        แดง
+
+                    </label>
+
+
+                    <label class="color-option">
+
+                        <input
+                            type="radio"
+                            name="color"
+                            value="น้ำเงิน">
+
+                        <span class="color-circle blue"></span>
+
+                        น้ำเงิน
+
+                    </label>
+
+
+                    <label class="color-option">
+
+                        <input
+                            type="radio"
+                            name="color"
+                            value="เหลือง">
+
+                        <span class="color-circle yellow"></span>
+
+                        เหลือง
+
+                    </label>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUALITY -->
+
+            <div class="form-section">
+
+                <h2>
+                    04. คุณภาพงาน
+                </h2>
+
+
+                <select id="quality"
+                        class="select-input">
+
+                    <option value="1">
+                        Standard — 0.20 mm
+                    </option>
+
+                    <option value="1.3">
+                        Fine — 0.12 mm (+30%)
+                    </option>
+
+                    <option value="1.6">
+                        Ultra Fine — 0.08 mm (+60%)
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- WEIGHT -->
+
+            <div class="form-section">
+
+                <h2>
+                    05. น้ำหนักโดยประมาณ
+                </h2>
+
+                <p class="form-description">
+                    ใส่น้ำหนักโดยประมาณของชิ้นงาน
+                </p>
+
+
+                <div class="input-with-unit">
+
+                    <input
+                        type="number"
+                        id="weight"
+                        value="50"
+                        min="1">
+
+                    <span>
+                        กรัม
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUANTITY -->
+
+            <div class="form-section">
+
+                <h2>
+                    06. จำนวน
+                </h2>
+
+
+                <div class="quantity-control">
+
+                    <button
+                        type="button"
+                        id="minusButton">
+                        −
+                    </button>
+
+                    <span id="quantity">
+                        1
+                    </span>
+
+                    <button
+                        type="button"
+                        id="plusButton">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CUSTOMER -->
+
+            <div class="form-section">
+
+                <h2>
+                    07. ข้อมูลผู้สั่ง
+                </h2>
+
+
+                <div class="input-grid">
+
+                    <div>
+
+                        <label>
+                            ชื่อ
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            placeholder="ชื่อของคุณ">
+
+                    </div>
+
+
+                    <div>
+
+                        <label>
+                            เบอร์โทร
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="customerPhone"
+                            placeholder="08xxxxxxxx">
+
+                    </div>
+
+                </div>
+
+
+                <label>
+                    อีเมล
+                </label>
+
+                <input
+                    type="email"
+                    id="customerEmail"
+                    placeholder="example@email.com">
+
+
+                <label>
+                    หมายเหตุ
+                </label>
+
+                <textarea
+                    id="customerNote"
+                    rows="4"
+                    placeholder="รายละเอียดเพิ่มเติม เช่น ต้องการ support, งานต้องการใช้วันที่..."></textarea>
+
+            </div>
+
+
+            <button
+                id="submitOrder"
+                class="submit-button">
+
+                ส่งคำสั่งพิมพ์
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- RIGHT -->
+
+        <aside class="price-card">
+
+            <div class="price-header">
+
+                <span>
+                    ESTIMATED PRICE
+                </span>
+
+                <div id="totalPrice">
+                    ฿ 100.00
+                </div>
+
+            </div>
+
+
+            <div class="price-details">
+
+                <div>
+
+                    <span>
+                        วัสดุ
+                    </span>
+
+                    <strong id="priceMaterial">
+                        PLA
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        น้ำหนัก
+                    </span>
+
+                    <strong id="priceWeight">
+                        50 g
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        จำนวน
+                    </span>
+
+                    <strong id="priceQuantity">
+                        1
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        คุณภาพ
+                    </span>
+
+                    <strong id="priceQuality">
+                        Standard
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="price-note">
+
+                ⚡ ราคานี้เป็นเพียงราคาประเมินเบื้องต้น
+
+                <br><br>
+
+                ราคาจริงอาจเปลี่ยนแปลงตามรูปทรง
+                support และเวลาในการพิมพ์
+
+            </div>
+
+
+            <div class="secure-note">
+
+                🔒 ข้อมูลของคุณจะถูกเก็บเป็นความลับ
+
+            </div>
+
+        </aside>
+
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        PRINT<span>LAB</span>
+    </div>
+
+    <p>
+        3D Printing Service
+    </p>
+
+    <div class="copyright">
+        © 2026 PRINTLAB
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+```
